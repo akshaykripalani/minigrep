@@ -1,6 +1,6 @@
 use std::env;
 use std::process;
-use minigrep::Config;
+use shaygrep::Config;
 
 fn main() { 
     let config: Config = Config::build(env::args()).unwrap_or_else(|err| {
@@ -11,7 +11,7 @@ fn main() {
     println!("Searching for {}", config.query);
     println!("in {}", config.file_path);
 
-    if let Err(e) = minigrep::run(config) {
+    if let Err(e) = shaygrep::run(config) {
         eprintln!("Application Error: {e}");
         process::exit(1);
     }

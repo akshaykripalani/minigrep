@@ -1,6 +1,8 @@
 [package]
-name = "minigrep"
+name = "shaygrep"
 version = "0.1.0"
+license = "MIT"
 edition = "2024"
+description = "Minigrep from the Rust Book, for my practice"
 
 [dependencies]
